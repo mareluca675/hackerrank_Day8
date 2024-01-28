@@ -1,0 +1,36 @@
+#include <iostream>
+#include <unordered_map>
+
+using namespace std;
+
+int main()
+{
+    int i;
+    string m;
+
+    cin >> i;
+
+    unordered_map<string, int> data;
+    
+    for (int k = 0; k < i; k++)
+    {
+        string str;
+        int num;
+        cin >> str >> num;
+        data[str] = num;
+    }
+
+    while(cin >> m)
+    {
+        if (data[m] != 0)
+        {
+            cout << m << '=' << data[m] << endl;
+        }
+        else
+        {
+            cout << "Not found" << endl;
+        }
+    }
+
+    return 0;
+}
